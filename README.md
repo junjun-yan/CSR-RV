@@ -40,12 +40,12 @@ For MKL:
 icc mkl.cpp -std=c++11 -L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl -o mkl
 ```
 
-## Dataset
+### Dataset
 
 All the matrices we used in our benchmark are listed in `./in/matrix93.txt`, and their files are publicly available on [SuiteSparse Matrix Collection](https://sparse.tamu.edu/).
 
 
-### Other Baselines
+### Baselines
 
 This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, CSR5 and SPV8, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR), [weifengliu-ssslab / Benchmark_SpMV_using_CSR5](https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5)) and [monkey2000/spv8-public](https://github.com/monkey2000/spv8-public). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
 
