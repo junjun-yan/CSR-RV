@@ -47,7 +47,7 @@ All the matrices we used in our benchmark are listed in `./in/matrix93.txt`, and
 
 ### Other Baselines
 
-This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, CSR5 and SPV8, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR), [weifengliu-ssslab / Benchmark_SpMV_using_CSR5]([https://github.com/puckbee/pava](https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5)) and [monkey2000/spv8-public](https://github.com/monkey2000/spv8-public). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
+This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, CSR5 and SPV8, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR), [weifengliu-ssslab / Benchmark_SpMV_using_CSR5](https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5)) and [monkey2000/spv8-public](https://github.com/monkey2000/spv8-public). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
 
 
 ### Results
@@ -95,4 +95,4 @@ If you use code or datasets in this repository for your research, please cite ou
     numpages = {7},
     location = {Jinan, China}
 }
-``
+```
