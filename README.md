@@ -11,7 +11,7 @@ An official source code for paper [CSR&RV: An Efficient Value Compression Format
 </p>
 
 <div  align="center">    
-    <img src="./pic/CSRRV.jpg" width=60%/>
+    <img src="./pic/CSRRV.jpg" width=80%/>
 </div>
 
 <div  align="center">    
@@ -53,23 +53,25 @@ This repo only contains two kernel for CSR&RV and MKL. For other methods like CV
 ### Results
 
 <div  align="center">    
-    <img src="./pic/preformance.jpg" width=100%/>
+    <img src="./pic/performance.jpg" width=80%/>
 </div>
 
 <div  align="center">    
     The overall preformance in different formats
 </div>
+-------------
 
 <div  align="center">    
-    <img src="./pic/memory_reducation.jpg" width=100%/>
+    <img src="./pic/memory_reducation.jpg" width=70%/>
 </div>
 
 <div  align="center">    
     Memory reduction in the CSR&RV format compares to CSR
 </div>
+-------------
 
 <div  align="center">    
-    <img src="./pic/preprocessing.jpg" width=100%/>
+    <img src="./pic/preprocessing.jpg" width=60%/>
 </div>
 
 <div  align="center">    
