@@ -21,55 +21,25 @@ An official source code for paper [CSR&RV: An Efficient Value Compression Format
 
 ### Requirements
 
-The proposed DCRN is implemented with python 3.8.5 on a NVIDIA 3090 GPU. 
+1. Intel Xeon Processor with AVX-512 support
+2. Intel classic compiler (ICC 2021.5.0)
+3. openmp for multi-threads
+4. Intel math kernel library from the Intel OneAPI
+5. cpupower (to set frequency, other available tools should also work)
 
-Python package information is summarized in **requirements.txt**:
+### Compilation
 
-- torch==1.8.0
-- tqdm==4.50.2
-- numpy==1.19.2
-- munkres==1.1.4
-- scikit_learn==1.0.1
+```
+icc csv_avx512.cpp -o csv -O3 -std=c++11 -fopenmp
+```
 
-### Pre-training
-We release the pre-training code.
+## Dataset
 
-- Google Drive: [Link](https://drive.google.com/file/d/1XRlu3Ahgwin52jluqFu2aBW6wjCwjY4M/view?usp=sharing)
-- Nut store: [Link](https://www.jianguoyun.com/p/DXCOQEYQwdaSChiEjrsEIAA)
+All the matrices we used in our benchmark are listed in `contrib/data.txt`, and their files are publicly available on [SuiteSparse Matrix Collection](https://sparse.tamu.edu/).
 
-### Quick Start
+# Notes
 
-- Step1: use the **dblp.zip** file or download other datasets from [Awesome Deep Graph Clustering/Benchmark Datasets](https://github.com/yueliu1999/Awesome-Deep-Graph-Clustering#benchmark-datasets) 
-
-- Step2: unzip the dataset into the **./dataset** folder
-
-- Step3: run 
-
-  ```
-  python main.py --name dblp --seed 3 --alpha_value 0.2 --lambda_value 10 --gamma_value 1e3 --lr 1e-4
-  ```
-
-Parameter setting
-
-- name: the name of dataset
-- seed: the random seed. 10 runs under different random seeds.
-- alpha_value: the teleport probability in graph diffusion
-  - PUBMED: 0.1
-  - DBLP, CITE, ACM, AMAP, CORAFULL: 0.2
-- lambda_value: the coefficient of clustering guidance loss.
-  - all datasets: 10
-- gamma_value: the coefficient of propagation regularization
-  - all datasets: 1e3
-- lr: learning rate
-  - DBLP 1e-4
-  - ACM: 5e-5
-  - AMAP: 1e-3
-  - CITE, PUBMED, CORAFULL: 1e-5
-
-
-
-Tips: Limited by the GPU memory, PUBMED and CORAFULL might be out of memory during training. Thus, we adpot batch training on PUBMED and CORAFULL dataseets and the batch size is set to 2000. Please use the batch training version of DCRN [here](https://drive.google.com/file/d/185GLObsQQL3Y-dQ2aIin5YrXuA-dgpnU/view?usp=sharing).
-
+This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, ESB and CSR5, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR) and [puckbee/pava](https://github.com/puckbee/pava). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
 
 
 ### Results
