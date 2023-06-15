@@ -27,31 +27,41 @@ An official source code for paper [CSR&RV: An Efficient Value Compression Format
 4. Intel math kernel library from the Intel OneAPI
 5. cpupower (to set frequency, other available tools should also work)
 
+
 ### Compilation
 
+For CSR&RV:
 ```
 icc csv_avx512.cpp -o csv -O3 -std=c++11 -fopenmp
 ```
 
+For MKL:
+```
+icc mkl.cpp -std=c++11 -L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl -o mkl
+```
+
 ## Dataset
 
-All the matrices we used in our benchmark are listed in `contrib/data.txt`, and their files are publicly available on [SuiteSparse Matrix Collection](https://sparse.tamu.edu/).
+All the matrices we used in our benchmark are listed in `./in/matrix93.txt`, and their files are publicly available on [SuiteSparse Matrix Collection](https://sparse.tamu.edu/).
 
-# Notes
 
-This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, ESB and CSR5, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR) and [puckbee/pava](https://github.com/puckbee/pava). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
+### Other Baselines
+
+This repo only contains two kernel for CSR&RV and MKL. For other methods like CVR, CSR5 and SPV8, we reused kernels provided in [puckbee/CVR](https://github.com/puckbee/CVR), [weifengliu-ssslab / Benchmark_SpMV_using_CSR5]([https://github.com/puckbee/pava](https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5)) and [monkey2000/spv8-public](https://github.com/monkey2000/spv8-public). These kernels are collected from the original authors. And we only modified their output code to simplify data collection.
 
 
 ### Results
 
 <div  align="center">    
-    <img src="./assets/result.png" width=100%/>
+    <img src="./pic/preformance.pdf" width=100%/>
 </div>
 
-
+<div  align="center">    
+    <img src="./pic/memory_reducation.pdf" width=100%/>
+</div>
 
 <div  align="center">    
-    <img src="./assets/t-sne.png" width=100%/>
+    <img src="./pic/preprocessing.pdf" width=100%/>
 </div>
 
 
