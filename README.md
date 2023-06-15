@@ -59,7 +59,7 @@ This repo only contains two kernel for CSR&RV and MKL. For other methods like CV
 <div  align="center">    
     The overall preformance in different formats
 </div>
--------------
+<br>
 
 <div  align="center">    
     <img src="./pic/memory_reducation.jpg" width=70%/>
@@ -68,7 +68,7 @@ This repo only contains two kernel for CSR&RV and MKL. For other methods like CV
 <div  align="center">    
     Memory reduction in the CSR&RV format compares to CSR
 </div>
--------------
+<br>
 
 <div  align="center">    
     <img src="./pic/preprocessing.jpg" width=60%/>
