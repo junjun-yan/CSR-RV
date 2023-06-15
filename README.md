@@ -11,11 +11,11 @@ An official source code for paper [CSR&RV: An Efficient Value Compression Format
 </p>
 
 <div  align="center">    
-    <img src="./pic/csrrv.pdf" width=60%/>
+    <img src="./pic/CSRRV.pdf" width=60%/>
 </div>
 
 <div  align="center">    
-    Illustration of the Dual Correlation Reduction Network (DCRN).
+    The CSR&RV format.
 </div>
 
 
@@ -90,20 +90,17 @@ Tips: Limited by the GPU memory, PUBMED and CORAFULL might be out of memory duri
 If you use code or datasets in this repository for your research, please cite our paper.
 
 ```
-@inproceedings{DCRN,
-  title={Deep Graph Clustering via Dual Correlation Reduction},
-  author={Liu, Yue and Tu, Wenxuan and Zhou, Sihang and Liu, Xinwang and Song, Linxuan and Yang, Xihong and Zhu, En},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={36},
-  number={7},
-  pages={7603-7611},
-  year={2022}
-}
-
-@article{Deep_graph_clustering_survey,
- author = {Liu, Yue and Xia, Jun and Zhou, Sihang and Wang, Siwei and Guo, Xifeng and Yang, Xihong and Liang, Ke and Tu, Wenxuan and Li, Z. Stan and Liu, Xinwang},
- journal = {arXiv preprint arXiv:2211.12875},
- title = {A Survey of Deep Graph Clustering: Taxonomy, Challenge, and Application},
- year = {2022}
+@inproceedings{CSRRV,
+    author = {Yan, Junjun and Chen, Xinhai and Liu, Jie},
+    title = {CSR\&RV: An Efficient Value Compression Format for Sparse Matrix-Vector Multiplication},
+    year = {2022},
+    isbn = {978-3-031-21394-6},
+    publisher = {Springer-Verlag},
+    address = {Berlin, Heidelberg},
+    doi = {10.1007/978-3-031-21395-3_5},
+    booktitle = {Network and Parallel Computing: 19th IFIP WG 10.3 International Conference, NPC 2022},
+    pages = {54–60},
+    numpages = {7},
+    location = {Jinan, China}
 }
 ``
